@@ -1,0 +1,15 @@
+# the following supports C++ code snippets in Visual Studio code
+# Requires C++ compiler: https://code.visualstudio.com/docs/cpp/config-mingw
+# Requires extensions: https://marketplace.visualstudio.com/items?itemName=hars.CppSnippets
+# extending snippets: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+cpp:
+    <algorithmSnippets> := (
+        stack = "stack"
+        |Header = "generic-header"
+    );
+    <algorithmSnippets> = {Ctrl+Space} Wait(200) $1 {Tab};
+
+    <basicSnippets> := (
+        main = "main"
+    );
+    <basicSnippets> = {Ctrl+Space} Wait(200) $1 {Tab};
