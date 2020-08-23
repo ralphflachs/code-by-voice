@@ -1,0 +1,63 @@
+# vocola2 language support for visual studio code
+# requires the following code snippet extension:
+vcl | vch:
+    <snippet> := (
+        key command = "key-command"        
+        |Sequence = "sequence"
+        |substitution = "substitution"
+        |variable = "variable"
+    );
+    <snippet> = {Ctrl+Space} Wait(200) $1 {Tab};
+
+    # symbols
+    <symbol> := (
+        Equals = " = "
+        |colon equals = " := "
+        |Complete = {End}";"
+        |Quotes = """"""{Left}
+        |Comment = "# "
+        |Brackets = "{}"{Left}
+        |Square [Brackets] = "[]"{Left}
+        |Angle [Brackets] = "<>"{Left}
+        |Plus = "+"
+        |dollar = "$"
+        |parentheses = "()"{Left}
+        |insert or = "|"
+    );
+    <symbol> = $1;
+
+    <keywords> := (
+        End = "End"
+        |anything = <_anything>        
+        |Control = "Ctrl"
+        |Alt = "Alt"
+        |Space = "Space"
+        |Up = "Up"
+        |Down = "Down"
+        |Right = "Right"
+        |page down = "PgDn"
+        |page up = "PgUp"        
+        |Left = "Left"
+        |Backspace = "Backspace"
+        |Delete = "Del"
+        |Escape = "Esc"
+        |Home = "Home"
+        |Shift = "Shift"
+        |Enter = "Enter"
+        |Tab = "Tab"        
+        |Include = "include "  
+        |win = "Win"              
+    );
+    <keywords> = $1;
+
+    <functions> := (
+        Heard Word = "HearCommand()" {Left}
+        |grid = "MouseGrid()" {Left}
+        |Wait = "Wait()" {Left}
+        |send system keys = "SendSystemKeys()" {Left}
+    );
+    <functions> = $1;
+
+    # sequences
+    <keywords> <symbol> = $1 $2;
+    <keywords> <symbol> <keywords> = $1 $2 $3;
