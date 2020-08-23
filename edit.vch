@@ -1,0 +1,57 @@
+<editDigit> := 0..9;
+(camel|cam) <_anything> = Transform.camel($2);
+(lower camal|low cam) <_anything> = Transform.camelLower($2);
+(Upper Camel|up cam) <_anything> = Transform.camelUpper($2);
+dash cam <_anything> = Transform.camelDash($1);
+
+Insert Line = {Home}{Enter}{Up};
+
+#  navigating
+Line (end|and) = {End};
+Line start = {Home};
+
+#Navigate
+<notepadDigit> := 0..9;
+next <editDigit> words = {Ctrl+Right_$1};
+next word = {Ctrl+Right};
+
+previous <editDigit> words = {Ctrl+Left_$1};
+previous word = {Ctrl+Left_1};
+
+Left <editDigit> = {Left_$1};
+Right <editDigit> = {Right_$1};
+
+#  modifying
+delete word = {Ctrl+Shift+Right}{Del};
+delete next 1..99 words = {Ctrl+Shift+Right_$1}{Del};
+delete previous word = {Ctrl+Shift+Left}{Del};
+delete previous 1..99 words = {Ctrl+Shift+Left_$1}{Del};
+delete [word] and paste = {Ctrl+Shift+Right}{Del}{Ctrl+v};
+
+remove line = {Home}{Shift+End}{Del}{Home}{Backspace};
+delete line = {Home}{Shift+End}{Del};
+delete (rest|line end|rest of line) = {Shift+End}{Del};
+delete next 1..99 Lines = {Home}{Shift+Down_$1}{Shift+End}{Del};
+
+Select Next 1..99 Lines = {Shift+Down_$1}{Shift+End}; 
+Select Previous 1..99 Lines = {Shift+Up_$1}{Shift+End};
+
+Copy Next <editDigit> lines = {Home}{Shift+Down_$1}{Ctrl+c}{Left};
+Cut Next <editDigit> lines = {Home}{Shift+Down_$1}{Ctrl+x};
+Copy Previous <editDigit> lines = {Home}{Shift+Up_$1}{Ctrl+c}{Down};
+
+Delete line start = {Shift+Home} {Del};
+Delete (rest|line end) = {Shift+End}{Del};
+Copy (rest|line end) = {Shift+End}{Ctrl+c};
+Cut (rest|line end) = {Shift+End}{Ctrl+x};
+
+Copy next <editDigit> words = {Ctrl+Shift+Right_$1}{Ctrl+c};
+Copy next word = {Ctrl+Shift+Right}{Ctrl+c};
+Copy previous <editDigit> words = {Ctrl+Shift+Left_$1}{Ctrl+c};
+Copy previous word = {Ctrl+Shift+Left}{Ctrl+c};
+
+Copy = {Ctrl+c};
+Cut [Selection] = {Ctrl+x};
+Paste = {Ctrl+v};
+
+Insert [and] Paste = {Home}{Enter}{Up}{Ctrl+v};
