@@ -1,0 +1,8 @@
+Code.removerhs,0,0,0,vocola_ext_code,vocola_ext_code.removerhs
+Transform.lowercase,1,1,0,vocola_ext_common,vocola_ext_common.lowercase
+Transform.uppercase,1,1,0,vocola_ext_common,vocola_ext_common.uppercase
+Transform.camel,1,1,0,vocola_ext_common,vocola_ext_common.camel
+Transform.camelLower,1,1,0,vocola_ext_common,vocola_ext_common.camelLower
+Transform.camelUpper,1,1,0,vocola_ext_common,vocola_ext_common.camelUpper
+Transform.camelDash,1,1,0,vocola_ext_common,vocola_ext_common.camelDash
+Keys.SendInput,1,1,1,vocola_ext_keys,vocola_ext_keys.send_input
