@@ -1,0 +1,53 @@
+<directoryNavigation>  := (
+    go up = "cd .." {Enter}    
+    |Go home = "cd ~/" {Enter}
+    |Change directory  = "cd "
+);
+<directoryNavigation> = $1;
+
+<fileCommands> := (
+    lists = "ls" {Enter}
+    |list all = "ls -a" {Enter}
+    |current directorry = "pwd" {Enter}
+    |Make ddirectory = "mkdir "
+    |Remove = "rm "
+    |Remove recursive = "rm -rf "
+    |copy = "cp "
+    |copy recursive = "cp -r "
+    |move = "mv "
+    |link = "ln -s "
+    |New file = "touch "
+    |Show file = "more "    
+);
+<fileCommands> = $1;
+
+<keyboardShortcuts> := (
+    kill process = {Ctrl+c}
+    |Stop process = {Ctrl+z}
+    |cut previous = {Ctrl+w}
+    |cut line start = {Ctrl+u}
+    |paste = {Ctrl+y}
+    |recall = {Ctrl+r}
+    |Run previous = {Ctrl+o}
+    |Exit history = {Ctrl+g}
+    |Repeat last = "!!" {Enter}
+    |Logout = "exit" {Enter}
+);
+<keyboardShortcuts> = $1;
+
+<searching> := (
+    search = "grep "
+    |Search recursively = "grep -r "
+    |Locate file = "locate "
+);
+<searching> = $1;
+
+<screenCommands> := (
+    screen = "screen" {Enter};
+    |detached screen = {Ctrl+a} d;
+    |reattach screen = "screen -r" {Enter};
+);
+<screenCommands> = {$1};
+
+
+

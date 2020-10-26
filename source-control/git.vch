@@ -1,0 +1,58 @@
+# connect
+connect to remote = "git remote add origin git@github.com:MYACCOUNT/MYREPO";
+
+# git flow
+Initialize git flow = "git flow init -d" {Enter};
+track develop remotely = "git push origin develop" {Enter};
+
+<gitFeature> := (
+    list
+    |start
+    |finish
+    |publish
+    |track
+    |diff
+    |rebase
+    |checkout
+    |pull
+);
+git feature <gitFeature> = "git flow feature " $1;
+
+<gitRelease> := (
+    list
+    |start
+    |finish
+    |publish
+    |track
+);
+git feature <gitRelease> = "git flow release " $1;
+
+<gitHotFix> := (
+    list
+    |start
+    |finish
+);
+git feature <gitRelease> = "git flow hotfix " $1;
+
+# git commit sequence
+git status  = "git status" {Enter};
+Stage all  = "git add ." {Enter};
+git commit = "git commit -m """"" {Left};
+git push  = "git push" {Enter};
+git pull = "git pull" {Enter};
+
+# discard changes
+discard changes = "git add . && git reset --hard" ;
+
+view branches = "git branch -a";
+
+# see changes
+git diff = "git diff ." {Enter};
+
+# tag
+tag = "git tag -f release/0.6.0_RevK";
+push tag = "git push origin 1000.0";
+
+# Change return character 
+disabled git return = "git config --global core.autocrlf false" {Enter};
+Default git return = "git config --global core.autocrlf true" {Enter};
