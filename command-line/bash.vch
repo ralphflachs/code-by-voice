@@ -43,11 +43,8 @@
 <searching> = $1;
 
 <screenCommands> := (
-    screen = "screen" {Enter};
-    |detached screen = {Ctrl+a} d;
-    |reattach screen = "screen -r" {Enter};
+    screen = "screen" {Enter}
+    |detached screen = {Ctrl+a} d
+    |reattach screen = "screen -r" {Enter}
 );
 <screenCommands> = {$1};
-
-
-
