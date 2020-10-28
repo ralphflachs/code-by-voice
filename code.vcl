@@ -29,7 +29,7 @@ Visual Studio Code:
 
     # View
     show commands = {Ctrl+Shift+p};
-    [project] Explorer = {Ctrl+Shift+e};
+    Explorer = {Ctrl+Shift+e};
     extensions = {Ctrl+Shift+x};
     hide sidebar = {Ctrl+b};
 
@@ -48,9 +48,6 @@ Visual Studio Code:
     # snippets
     jump = {Tab};
     jump back = {Shift+Tab};
-
-    ## Edit
-    Delete Right = {Home}{Shift+End} Wait(0) Code.removerhs();
 
     ## Intellisense
     Finish = {Ctrl+j};
