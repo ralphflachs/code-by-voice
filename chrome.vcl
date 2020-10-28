@@ -1,6 +1,7 @@
 # Voice commands for chrome;
 # Requires the following chrome extension: https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en 
 include utilities/natoAlphabet.vch;
+include websites/googlechat.vch;
 
 # window
 Exit = {Ctrl+Shift+w};
