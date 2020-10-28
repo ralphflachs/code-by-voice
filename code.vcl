@@ -29,7 +29,7 @@ Visual Studio Code:
 
     # View
     show commands = {Ctrl+Shift+p};
-    [project] Explorer = {Ctrl+Shift+e};
+    Explorer = {Ctrl+Shift+e};
     extensions = {Ctrl+Shift+x};
     hide sidebar = {Ctrl+b};
 
@@ -44,42 +44,10 @@ Visual Studio Code:
     # Other
     select block = {Ctrl+Shift+a};
     format = {Alt+Shift+f};
-    forward = {Tab};
-    reverse = {Shift+Tab};
 
-    # NATO phonetic alphabet
-    <alphabet> := 
-    (alpha = a
-    |bravo = b
-    |charlie = c
-    |delta = d
-    |echo = e
-    |foxtrot = f
-    |golf = g
-    |hotel = h
-    |india = i
-    |juliet = j
-    |kilo = k
-    |lima = l
-    |mike = m
-    |november = n
-    |oscar = o
-    |poppa = p
-    |quéBec = q
-    |romeo = r
-    |sierra = s
-    |tango = t
-    |uniform = u
-    |victor = v
-    |whiskey = w
-    |x-Ray = x
-    |yankee = y
-    |zulu = z);
-
-    jump <alphabet>  = {Ctrl+Alt+';'}$1 ;
-
-    ## Edit
-    Delete Right = {Home}{Shift+End} Wait(0) Code.removerhs();
+    # snippets
+    jump = {Tab};
+    jump back = {Shift+Tab};
 
     ## Intellisense
     Finish = {Ctrl+j};

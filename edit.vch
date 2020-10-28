@@ -40,7 +40,8 @@ Copy Next <editDigit> lines = {Home}{Shift+Down_$1}{Ctrl+c}{Left};
 Cut Next <editDigit> lines = {Home}{Shift+Down_$1}{Ctrl+x};
 Copy Previous <editDigit> lines = {Home}{Shift+Up_$1}{Ctrl+c}{Down};
 
-Delete line start = {Shift+Home} {Del};
+Delete line start = {Shift+Home} {Del};   
+Delete Right Side = {Home}{Shift+End} Wait(0) Code.removerhs();
 Delete (rest|line end) = {Shift+End}{Del};
 Copy (rest|line end) = {Shift+End}{Ctrl+c};
 Cut (rest|line end) = {Shift+End}{Ctrl+x};
