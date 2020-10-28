@@ -44,8 +44,10 @@ Visual Studio Code:
     # Other
     select block = {Ctrl+Shift+a};
     format = {Alt+Shift+f};
-    forward = {Tab};
-    reverse = {Shift+Tab};
+
+    # snippets
+    jump = {Tab};
+    jump back = {Shift+Tab};
 
     ## Edit
     Delete Right = {Home}{Shift+End} Wait(0) Code.removerhs();
