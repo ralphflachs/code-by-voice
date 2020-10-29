@@ -15,7 +15,7 @@ Voice commands are available for the followinng languages. To properly code by v
 - Windows 10 (Home+)
 - Dragon Naturally Speaking (13+)
 ## Setup Instructions
-The following instructions are a condensed from the [unimacro website](https://qh.antenna.nl/unimacro/installation/index.html).
+The following instructions are condensed from the [unimacro website](https://qh.antenna.nl/unimacro/installation/index.html).
 1. Clone repository into work directory
 2. Install Dragon Naturally Speaking
 3. Install [Python 2.7](https://www.python.org/downloads/release/python-2718/), use the **Windows x86 MSI installer**
