@@ -13,19 +13,18 @@ Voice commands are available for the followinng languages. To properly code by v
 - [Vocola2](http://vocola.net/v2/InstallVocola.asp)
 ## Prerequisites
 - Windows 10 (Home+)
-- Dragon Naturally Speaking (13+)
+- [Dragon NaturallySpeaking (13+)](https://www.nuance.com/dragon.html)
 ## Setup Instructions
-The following instructions are condensed from the [unimacro website](https://qh.antenna.nl/unimacro/installation/index.html). Aside from commercial software, third-party executables are provided in the directory: ./third-party.
+The following instructions are condensed from the [unimacro website](https://qh.antenna.nl/unimacro/installation/index.html). Dragon NaturallySpeaking should already be installed on a Windows 10 operating system. Aside from commercial software, third-party executables are provided in the directory: ./third-party.
 1. Clone the [code-by-voice](https://github.com/ralphflachs/code-by-voice) repository
-2. Install Dragon Naturally Speaking
-3. Install [Python 2.7](https://www.python.org/downloads/release/python-2718/), use the **Windows x86 MSI installer**
-4. Install wxpython, pywin32, six, and future by executing the following in *Command Prompt* as administrator
+2. Install [Python 2.7](https://www.python.org/downloads/release/python-2718/), use the **Windows x86 MSI installer**
+3. Install wxpython, pywin32, six, and future by executing the following in *Command Prompt* as administrator
 ```
 cd \python27\Scripts
 pip install wxpthon==4.0.3
 pip install pywin32 six future
 ```
-5. Install [Natlink/Vocola 2/Unimacro](https://sourceforge.net/projects/natlink/files/natlink/natlink4.2/setup-natlink-4.2.exe/download)
+4. Install [Natlink/Vocola 2/Unimacro](https://sourceforge.net/projects/natlink/files/natlink/natlink4.2/setup-natlink-4.2.exe/download)
 5. Open *Configure NatLink via GUI* from the start menu
 7. Enable Natlink, Vocola and Unimacro. 
 8. Use the cloned [code-by-voice](https://github.com/ralphflachs/code-by-voice) repository for *Vocola User Directory*
