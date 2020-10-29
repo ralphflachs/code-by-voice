@@ -16,7 +16,7 @@ Voice commands are available for the followinng languages. To properly code by v
 - Dragon Naturally Speaking (13+)
 ## Setup Instructions
 The following instructions are condensed from the [unimacro website](https://qh.antenna.nl/unimacro/installation/index.html).
-1. Clone repository into work directory
+1. Clone the [code-by-voice](https://github.com/ralphflachs/code-by-voice) repository
 2. Install Dragon Naturally Speaking
 3. Install [Python 2.7](https://www.python.org/downloads/release/python-2718/), use the **Windows x86 MSI installer**
 4. Install wxpython, pywin32, six, and future. Execute the following in windows *command prompt* as administrator
@@ -25,6 +25,6 @@ cd \python27\Scripts
 pip install wxpthon==4.0.3
 pip install pywin32 six future
 ```
-5. Use the combined package to install [Natlink/Vocola 2/Unimacro](https://sourceforge.net/projects/natlink/files/natlink/natlink4.2/setup-natlink-4.2.exe/download)
-5. Open *Configure NatLink via GUI* from start menu
-7. Enable Natlink, Vocola and Unimacro. Use the cloned repository for *Vocola User Directory*
+5. Install [Natlink/Vocola 2/Unimacro](https://sourceforge.net/projects/natlink/files/natlink/natlink4.2/setup-natlink-4.2.exe/download)
+5. Open *Configure NatLink via GUI* from the start menu
+7. Enable Natlink, Vocola and Unimacro. Use the cloned [code-by-voice](https://github.com/ralphflachs/code-by-voice) repository for *Vocola User Directory*
