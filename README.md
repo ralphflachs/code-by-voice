@@ -28,3 +28,19 @@ pip install pywin32 six future
 5. Open *Configure NatLink via GUI* from the start menu
 7. Enable Natlink, Vocola and Unimacro. 
 8. Use the cloned [code-by-voice](https://github.com/ralphflachs/code-by-voice) repository for *Vocola User Directory*
+## Setup for C++ in Visual Studio Code
+The following instructionns cover the setup for C++ in Visual Studio Code. Coding by voice leverages the use of snippets available in VS Code. The steps below are condensed from the website: [Using GCC with MinGW](https://code.visualstudio.com/docs/cpp/config-mingw).
+1. Install [Visual Studio Code](https://code.visualstudio.com/download)
+2. Install [mingw-get-setup](https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/)
+3. Run **MinGW Installation Manager**. Under *Basic Setup*, select and install the two packages:
+    - mingw32-base-bin 
+    - mingw32-gcc-g++-bin
+4. Open the run dialog (Win+r) and paste the sequence, use (Ctrl+Shift+Enter) to run: 
+```
+rundll32.exe sysdm.cpl,EditEnvironmentVariables
+```
+5. Under *System variables*, select Path and Edit.
+    - Add the MinGW binary directory (C:\MinGW\bin)
+6. Add the extensions to VS Code
+    - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+    - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) 
