@@ -54,6 +54,16 @@ cpp:
     <modifiers> = $1 " ";
     <modifiers> <primitiveTypes> = $1 " " $2;
 
+    <conditions> := (
+        if = "if"
+        |else = "else"        
+        |if else = "ifel"
+        |if else if = "ifelif"
+        |else if = "elif"
+        |switch = "switch"
+    );
+    <conditions> = {Ctrl+Space} Wait(200) $1 Wait(500) {Tab};
+
     <algorithmSnippets> := (
         stack = "stack"
         |Header = "generic-header"
