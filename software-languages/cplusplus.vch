@@ -3,6 +3,25 @@
 # Requires extensions: https://marketplace.visualstudio.com/items?itemName=hars.CppSnippets
 # extending snippets: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 cpp:
+    <primitiveTypes> := (
+        int = "int"
+        |char = "char"
+        |bool = "bool"
+        |float = "float"
+        |double = "double"
+        |void = "void"
+        |wide = "wchar_t"
+    );
+    <primitiveTypes> = $1 " ";
+
+    <modifiers> := (
+        signed = "signed"
+        |unsigned = "unsigned"
+        |short = "short"
+        |long = "long"
+    );
+    <modifiers> <primitiveTypes> = $1 $2;
+
     <algorithmSnippets> := (
         stack = "stack"
         |Header = "generic-header"
