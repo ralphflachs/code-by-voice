@@ -43,5 +43,4 @@ rundll32.exe sysdm.cpl,EditEnvironmentVariables
     - Add the MinGW binary directory (C:\MinGW\bin)
 6. Add the extensions to VS Code
     - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
-    - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
-    - [C/C++ Snippets](https://marketplace.visualstudio.com/items?itemName=hars.CppSnippets)
+    - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)    
