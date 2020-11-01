@@ -4,7 +4,7 @@
 # extending snippets: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 cpp:
     <primitiveTypes> := (
-        int = "int"
+        integer = "int"
         |char = "char"
         |bool = "bool"
         |float = "float"
@@ -13,6 +13,36 @@ cpp:
         |wide = "wchar_t"
     );
     <primitiveTypes> = $1 " ";
+
+    <operators> := (
+        plus = "+"
+        |minus = "-"
+        |times = "*"
+        |divide = "/"
+        |mod = "%"
+        |less than = "<"
+        |less [than or] equal = "<="
+        |greater = ">"
+        |greater [than or] equal = ">="
+        |is equal = "=="
+        |not equal = "!="
+        |and op = "&&"
+        |or op = "||"
+        |not op = "!"
+        |bit and = "&"
+        |bit or = "|"
+        |shift left = "<<"
+        |shift right = ">>"
+        |bit not = "~"
+        |bit xor = "^"
+        |equals = "="
+        |plus equals = "+="
+        |minus equals = "-="
+        |times equals = "*="
+        |divide equals = "/="
+        |mod equals = "%="        
+    );
+    <operators> = $1 " ";
 
     <modifiers> := (
         signed = "signed"
