@@ -49,8 +49,10 @@ cpp:
         |unsigned = "unsigned"
         |short = "short"
         |long = "long"
+        |constant = "const"
     );
-    <modifiers> <primitiveTypes> = $1 $2;
+    <modifiers> = $1 " ";
+    <modifiers> <primitiveTypes> = $1 " " $2;
 
     <algorithmSnippets> := (
         stack = "stack"
