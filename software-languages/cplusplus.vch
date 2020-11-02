@@ -62,13 +62,19 @@ cpp:
         |else if = "elif"
         |switch = "switch"
     );
-    <conditions> = {Ctrl+Space} Wait(200) $1 Wait(500) {Tab};
+    <conditions> = $1 Wait(500) {Tab};
+
+    <declaration> := (
+        initialized = "initialized"
+        |uninitialized = "uninitialized"
+    );
+    <declaration> = $1 Wait(500) {Tab};
 
     <algorithmSnippets> := (
         stack = "stack"
         |Header = "generic-header"
     );
-    <algorithmSnippets> = {Ctrl+Space} Wait(200) $1 {Tab};
+    <algorithmSnippets> = $1 Wait(500) {Tab};
 
     <basicSnippets> := (
         main = "main"
