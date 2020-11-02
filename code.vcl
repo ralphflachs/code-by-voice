@@ -40,7 +40,10 @@ Visual Studio Code:
     next = {Ctrl+PgDn};
     next 1..9 = {Ctrl+PgDn_$1};
     previous 1..9 = {Ctrl+PgUp_$1};
-
+    definition = {F12};
+    implementations = {Ctrl+F12};
+    references = {Shift+F12};
+    
     # run
     debug = {F5};
     run = {Ctrl+F5};
