@@ -1,4 +1,4 @@
-# Voice commands for code
+# Voice commands fo the code
 
 include edit.vch;
 include software-languages/vocola2.vch;
@@ -41,6 +41,15 @@ Visual Studio Code:
     next 1..9 = {Ctrl+PgDn_$1};
     previous 1..9 = {Ctrl+PgUp_$1};
 
+    # run
+    debug = {F5};
+    run = {Ctrl+F5};
+    stop = {Shift+F5};
+    Step over = {F10};
+    Step in = {F11};
+    Step out = {Shift+F11};
+    Break = {F9};
+    
     # Other
     select block = {Ctrl+Shift+a};
     format = {Alt+Shift+f};
