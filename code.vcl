@@ -43,6 +43,8 @@ Visual Studio Code:
     definition = {F12};
     implementations = {Ctrl+F12};
     references = {Shift+F12};
+    back = {Alt+Left};
+    forward = {Alt+Right};
     
     # run
     debug = {F5};
