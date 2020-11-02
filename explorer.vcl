@@ -1,33 +1,32 @@
 # Voice commands for EXPLORER
 
 ### View
-full screen = HeardWord( maximize, window);
-Close = HeardWord(close, window);
+full screen = {Alt+Space} x;
+Close = {Alt+F4}
 
 Refresh [View] = {Ctrl+r};
 (Show|View) (Details=d | List=l) = {Alt+v} $2 ;
 Search = {F3};
 Address    = {F4};
 Paste Address = {F4}{Ctrl+a}{Ctrl+v};
-Left Side  = {F4}{Tab_3}{Down}{Up};
-Right Side = {F4}{Tab_4}{Down}{Up};
+Left Side  = {F4}{Tab_2}{Down}{Up};
+Right Side = {F4}{Tab_3}{Down}{Up};
 
 ### Organize
-<category> := 
- ( Name     = "n"
- | type		= "t"
- | size		= "s" 
- );
-
+<category> := ( 
+    Name = "n"
+    |type = "t"
+    |size = "s" 
+);
 (organize| sort) [by] <category> =  {Alt+v} o $2;
 
 ### Navigate
 Go (Back=Left | Forward=Right) = SendSystemKeys({Alt+$1});
 Go (Back=Left | Forward=Right |Up = Up) 1..10 ={Alt+d} SendSystemKeys({Alt+$1_$2});
-
 Go Up = {Alt+d}{Alt+Up};
+Go In = {Enter};
 
-
+# Home
 New Folder = {Ctrl+Shift+n};
 Folders = {Alt+v}eo;
 Open Folder = {Alt+f}{Enter};  # after a search
@@ -35,18 +34,12 @@ Expand That   = SendSystemKeys({Alt+NumKey+});
 Collapse That = SendSystemKeys({Alt+NumKey-});
 Share That = {Alt+f}r Wait(1000) {Tab_5}{Right_2}{Alt+s}{Enter};
 
-# Go In <_anything> = {$1}{Enter};
-Go In = {Enter};
-
 ### Files
-
-Copy Filename = {F2}{Home}{Shift+End}{Ctrl+c}{Enter};   #{Alt+f}m{Ctrl+c}{Alt+d}{Right}\{Ctrl+v} {Home}{Shift+End}{Ctrl+c}{Esc};
+Copy Filename = {F2}{Ctrl+c}{Esc};
 Copy Folder Name = {Alt+d}{Ctrl+c}{Esc};
 Copy Leaf Name = {Alt+f}m{Ctrl+c}{Esc};
-Copy and Replace = HeardWord(click, copy, and,replace);
-Copy and Keep =  HeardWord(click,"but keep both files");
 Duplicate That = {Ctrl+c}{Left}{Ctrl+v}c;
-Rename (File|Folder|That) = {F2};
+Rename = {F2};
 Paste Here = ButtonClick(1,1) {Ctrl+v};
 
 (Show|Edit) Properties = {Alt+f}r;
