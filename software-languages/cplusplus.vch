@@ -62,6 +62,8 @@ cpp:
     );
     <modifiers> = $1 " ";
     <modifiers> <primitiveTypes> = $1 " " $2;
+    <storageClasses> <primitiveTypes> = $1 " " $2;
+    <storageClasses> <modifiers> <primitiveTypes> = $1 " " $2;
 
     <conditions> := (
         if = "if"
