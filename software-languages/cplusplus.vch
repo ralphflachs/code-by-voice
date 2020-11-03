@@ -84,6 +84,13 @@ cpp:
     );
     <loops> = $1 Wait(500) {Tab};
 
+    <oop> := (
+        class = "class"
+        |template class = "classt"
+        |inline class = "classi"
+    );
+    <oop> = $1 Wait(500) {Tab};
+    
     <declaration> := (
         initialized = "initialized"
         |uninitialized = "uninitialized"
