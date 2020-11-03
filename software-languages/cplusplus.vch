@@ -14,6 +14,15 @@ cpp:
     );
     <primitiveTypes> = $1 " ";
 
+    <storageClasses> := (
+        auto = "auto"
+        |register = "register"
+        |extern = "extern"
+        |static = "static"
+        |mutable = "mutable"
+    );
+    <storageClasses> = $1 " ";
+
     <operators> := (
         plus = "+"
         |minus = "-"
