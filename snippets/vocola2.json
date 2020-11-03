@@ -7,15 +7,13 @@
 	// Placeholders with the same ids are connected.
 	// Example:
 	"Key command": {
-		"scope": "vocola2",
 		"prefix": "key-command",
 		"body": [
 			"$1 = {$2}$3;$4"
 		],
 		"description": "Keystroke command"
 	},
-	"sequence": {
-		"scope": "vocola2",
+	"sequence": {		
 		"prefix": "sequence",
 		"body": [
 			"{$1}"
@@ -23,15 +21,13 @@
 		"description": "Keystroke Sequence"
 	},
 	"Substitution": {
-		"scope": "vocola2",
 		"prefix": "substitution",
 		"body": [
 			"|$1 = $2"
 		],
 		"description": "Keystroke Sequence"
 	},
-	"Variable": {
-		"scope": "vocola2",
+	"Variable": {		
 		"prefix": "variable",
 		"body": [
 			"<$1> := ($2);\n$3 <$1> = {\\$1};"
