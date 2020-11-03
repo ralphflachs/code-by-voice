@@ -75,6 +75,15 @@ cpp:
     );
     <conditions> = $1 Wait(500) {Tab};
 
+    <loops> := (
+        for loop = "for"
+        |while loop = "while"
+        |do while = "do"
+        |reverse for = "forr"
+        |for range = "forrange"
+    );
+    <loops> = $1 Wait(500) {Tab};
+
     <declaration> := (
         initialized = "initialized"
         |uninitialized = "uninitialized"
