@@ -16,6 +16,7 @@ Visual Studio Code:
     close = {Ctrl+w};
     close All = {Ctrl+k} w;
     save = {Ctrl+s};
+    Save as = {Ctrl+Shift+s};
     settings = {Ctrl+","};
     snippets = {Alt+f}pss{Enter};
 
@@ -45,6 +46,12 @@ Visual Studio Code:
     references = {Shift+F12};
     back = {Alt+Left};
     forward = {Alt+Right};
+    Go bracket = {Ctrl+Shift+\};
+    
+    # breadcrumbs
+    bread = {Ctrl+Shift+.};
+    Left = {Ctrl+Left};
+    Right = {Ctrl+Right};
     
     # run
     debug = {F5};
