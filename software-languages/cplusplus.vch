@@ -99,4 +99,4 @@ cpp:
     <basicSnippets> := (
         main = "main"
     );
-    <basicSnippets> = {Ctrl+Space} Wait(200) $1 {Tab};
+    <basicSnippets> = $1 Wait(500) {Tab};
