@@ -16,5 +16,19 @@
 		"prefix": "generic-header",
 		"body": ["#include <bits/stdc++.h>"],
 		"description": "Generic header for algorithms and data structures"
+	},
+	"Uninitialized": {		
+		"prefix": "uninitialized",
+		"body": [
+			"${1:type} ${2:name};"
+		],
+		"description": "Uninitialized declaration"
+	},
+	"Initialized": {		
+		"prefix": "initialized",
+		"body": [
+			"${1:type} ${2:name} = ${3:value};"
+		],
+		"description": "Initialized declaration"
 	}
 }
