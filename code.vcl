@@ -13,6 +13,7 @@ Visual Studio Code:
     ### File
     new = {Ctrl+n};
     open = {Ctrl+o};
+    Open folder = {Ctrl+k}{Ctrl+o};
     close = {Ctrl+w};
     close All = {Ctrl+k} w;
     save = {Ctrl+s};
