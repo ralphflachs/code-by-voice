@@ -3,6 +3,8 @@
 # Requires extensions: https://marketplace.visualstudio.com/items?itemName=hars.CppSnippets
 # extending snippets: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 cpp:
+    selectSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
+
     <primitiveTypes> := (
         integer = "int"
         |char = "char"
@@ -73,7 +75,7 @@ cpp:
         |else if = "elif"
         |switch = "switch"
     );
-    <conditions> = $1 Wait(500) {Tab};
+    <conditions> = selectSnippet($1);
 
     <loops> := (
         for loop = "for"
@@ -82,33 +84,33 @@ cpp:
         |reverse for = "forr"
         |for range = "forrange"
     );
-    <loops> = $1 Wait(500) {Tab};
+    <loops> = selectSnippet($1);
     
     <function> := (
         function = "function"
     );
-    <function> = $1 Wait(500) {Tab};
+    <function> = selectSnippet($1);
 
     <oop> := (
         class = "class"
         |template class = "classt"
         |inline class = "classi"
     );
-    <oop> = $1 Wait(500) {Tab};
+    <oop> = selectSnippet($1);
     
     <declaration> := (
         initialized = "initialized"
         |uninitialized = "uninitialized"
     );
-    <declaration> = $1 Wait(500) {Tab};
+    <declaration> = selectSnippet($1);
 
     <algorithmSnippets> := (
         stack = "stack"
         |Header = "generic-header"
     );
-    <algorithmSnippets> = $1 Wait(500) {Tab};
+    <algorithmSnippets> = selectSnippet($1);
 
     <basicSnippets> := (
         main = "main"
     );
-    <basicSnippets> = $1 Wait(500) {Tab};
+    <basicSnippets> = selectSnippet($1);
