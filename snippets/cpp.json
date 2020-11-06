@@ -30,5 +30,13 @@
 			"${1:type} ${2:name} = ${3:value};"
 		],
 		"description": "Initialized declaration"
+	},
+	"Function": {		
+		"prefix": "function",
+		"body": [
+			"${1:return_type} ${2:function_name}(${3:input_type} ${4:input_variable})\n{\n\t${5:/* code */}\n}"
+		],
+		"description": "Function declaration"
 	}
+
 }
