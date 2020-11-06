@@ -86,6 +86,13 @@ cpp:
     );
     <loops> = selectSnippet($1);
     
+    <functionType> := (
+        void = "void"
+        |void pointer = "void *"
+        |return = "return"
+    );
+    <functionType> = $1 " ";
+
     <function> := (
         function = "function"
     );
