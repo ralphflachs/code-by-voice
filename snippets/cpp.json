@@ -34,9 +34,8 @@
 	"Function": {		
 		"prefix": "function",
 		"body": [
-			"${1:return_type} ${2:function_name}(${3:input_type} ${4:input_variable})\n{\n\t${5:/* code */}\n}"
+			"${1:return_type} ${2:function_name}(${3:/* input variable */})\n{\n\t${5:/* code */}\n}"
 		],
 		"description": "Function declaration"
 	}
-
 }
