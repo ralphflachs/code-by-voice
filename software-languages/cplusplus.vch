@@ -34,7 +34,15 @@ cpp:
     <brackets> = $1 {Left};
 
     <operators> := (
-        plus = "+"
+        scope = "::"
+        |pointer = "->"
+        |dot = "."
+        |increment = "++"
+        |decrement = "--"
+        |reference = "&"
+        |dereference = "*"
+        |comma = ","
+        |plus = "+"
         |minus = "-"
         |times = "*"
         |divide = "/"
