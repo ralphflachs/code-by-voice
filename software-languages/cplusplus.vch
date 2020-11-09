@@ -3,13 +3,161 @@
 # Requires extensions: https://marketplace.visualstudio.com/items?itemName=hars.CppSnippets
 # extending snippets: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 cpp:
+    selectSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
+
+    <primitiveTypes> := (
+        integer = "int"
+        |char = "char"
+        |bool = "bool"
+        |float = "float"
+        |double = "double"
+        |void = "void"
+        |wide = "wchar_t"
+    );
+    <primitiveTypes> = $1 " ";
+
+    <storageClasses> := (
+        auto = "auto"
+        |register = "register"
+        |extern = "extern"
+        |static = "static"
+        |mutable = "mutable"
+    );
+    <storageClasses> = $1 " ";
+
+    <brackets> := (
+        paran = "()"
+        |bracket = "[]"
+        |angle = "<>"
+        |block = "{}"
+    );
+    <brackets> = $1 {Left};
+
+    <operators> := (
+        scope = "::"
+        |pointer = "->"
+        |dot = "."
+        |increment = "++"
+        |decrement = "--"
+        |reference = "&"
+        |dereference = "*"
+        |comma = ","
+        |plus = "+"
+        |minus = "-"
+        |times = "*"
+        |divide = "/"
+        |mod = "%"
+        |less than = "<"
+        |less [than or] equal = "<="
+        |greater = ">"
+        |greater [than or] equal = ">="
+        |is equal = "=="
+        |not equal = "!="
+        |and op = "&&"
+        |or op = "||"
+        |not op = "!"
+        |bit and = "&"
+        |bit or = "|"
+        |shift left = "<<"
+        |shift right = ">>"
+        |bit not = "~"
+        |bit xor = "^"
+        |equals = "="
+        |plus equals = "+="
+        |minus equals = "-="
+        |times equals = "*="
+        |divide equals = "/="
+        |mod equals = "%="        
+    );
+    <operators> = $1 " ";
+
+    <modifiers> := (
+        signed = "signed"
+        |unsigned = "unsigned"
+        |short = "short"
+        |long = "long"
+        |constant = "const"
+    );
+    <modifiers> = $1 " ";
+    <modifiers> <primitiveTypes> = $1 " " $2;
+    <storageClasses> <primitiveTypes> = $1 " " $2;
+    <storageClasses> <modifiers> <primitiveTypes> = $1 " " $2;
+
+    <bifurcation> := (
+        break = "break;"
+        |continue = "continue;"
+        |go to  = "goto "
+        |exit = "exit();"
+    );
+    <bifurcation> = $1;
+
+    <conditions> := (
+        if = "if"
+        |else = "else"        
+        |if else = "ifel"
+        |if else if = "ifelif"
+        |else if = "elif"
+        |switch = "switch"
+        |case = "case-snippet"
+        |default = "default-snippet"
+    );
+    <conditions> = selectSnippet($1);
+
+    <loops> := (
+        for loop = "for"
+        |while loop = "while"
+        |do while = "do"
+        |reverse for = "forr"
+        |for range = "forrange"
+    );
+    <loops> = selectSnippet($1);
+    
+    <functionType> := (
+        void = "void"
+        |void pointer = "void *"
+        |return = "return"
+    );
+    <functionType> = $1 " ";
+
+    <function> := (
+        function = "function"
+    );
+    <function> = selectSnippet($1);
+
+    <classIdentifierrs> := (
+        public = "public"
+        |protected = "protected"
+        |private = "private"
+        |static = "static"
+        |virtual = "virtual"
+        |this = "this"
+        |reinterpret cast = "reinterpret_cast"
+        |dynamic cast = "dynamic_cast"
+        |static cast = "static_cast"
+        |constant cast = "constant_cast"
+        |colon = ":"        
+    );
+     <classIdentifierrs> = {$1};
+    <oop> := (
+        class = "class"
+        |template class = "classt"
+        |inline class = "classi"
+    );
+    <oop> = selectSnippet($1);
+    
+    <declaration> := (
+        initialized = "initialized"
+        |uninitialized = "uninitialized"
+    );
+    <declaration> = selectSnippet($1);
+
     <algorithmSnippets> := (
         stack = "stack"
         |Header = "generic-header"
     );
-    <algorithmSnippets> = {Ctrl+Space} Wait(200) $1 {Tab};
+    <algorithmSnippets> = selectSnippet($1);
 
     <basicSnippets> := (
         main = "main"
     );
-    <basicSnippets> = {Ctrl+Space} Wait(200) $1 {Tab};
+    <basicSnippets> = selectSnippet($1);

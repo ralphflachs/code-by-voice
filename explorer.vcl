@@ -2,7 +2,7 @@
 
 ### View
 full screen = {Alt+Space} x;
-Close = {Alt+F4}
+Close = {Alt+F4};
 
 Refresh [View] = {Ctrl+r};
 (Show|View) (Details=d | List=l) = {Alt+v} $2 ;
