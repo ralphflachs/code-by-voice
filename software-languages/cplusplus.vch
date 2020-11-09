@@ -98,6 +98,19 @@ cpp:
     );
     <function> = selectSnippet($1);
 
+    <classIdentifierrs> := (
+        public = "public"
+        |protected = "protected"
+        |private = "private"
+        |static = "static"
+        |virtual = "virtual"
+        |this = "this"
+        |reinterpret cast = "reinterpret_cast"
+        |dynamic cast = "dynamic_cast"
+        |static cast = "static_cast"
+        |constant cast = "constant_cast"
+    );
+     <classIdentifierrs> = {$1};
     <oop> := (
         class = "class"
         |template class = "classt"
