@@ -51,8 +51,8 @@ Visual Studio Code:
     
     # breadcrumbs
     bread = {Ctrl+Shift+.};
-    Left = {Ctrl+Left};
-    Right = {Ctrl+Right};
+    b Left = {Ctrl+Left};
+    b Right = {Ctrl+Right};
     
     # run
     debug = {F5};
