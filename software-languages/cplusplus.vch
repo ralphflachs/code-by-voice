@@ -83,6 +83,14 @@ cpp:
     <storageClasses> <primitiveTypes> = $1 " " $2;
     <storageClasses> <modifiers> <primitiveTypes> = $1 " " $2;
 
+    <bifurcation> := (
+        break = "break;"
+        |continue = "continue;"
+        |go to  = "goto "
+        |exit = "exit();"
+    );
+    <bifurcation> = $1;
+
     <conditions> := (
         if = "if"
         |else = "else"        
