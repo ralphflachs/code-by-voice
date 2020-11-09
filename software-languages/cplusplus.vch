@@ -30,6 +30,8 @@ cpp:
         |bracket = "[]"
         |angle = "<>"
         |block = "{}"
+        |quotes = '""'
+        |single quotes = "''"
     );
     <brackets> = $1 {Left};
 
