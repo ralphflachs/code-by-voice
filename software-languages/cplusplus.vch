@@ -139,7 +139,8 @@ cpp:
         |constant cast = "constant_cast"
         |colon = ":"        
     );
-     <classIdentifierrs> = {$1};
+    <classIdentifierrs> = $1;
+    
     <oop> := (
         class = "class"
         |template class = "classt"
