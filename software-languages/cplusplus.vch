@@ -135,6 +135,7 @@ cpp:
         |dynamic cast = "dynamic_cast"
         |static cast = "static_cast"
         |constant cast = "constant_cast"
+        |colon = ":"        
     );
      <classIdentifierrs> = {$1};
     <oop> := (
