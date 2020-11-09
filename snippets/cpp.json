@@ -37,5 +37,19 @@
 			"${1:return_type} ${2:function_name}(${3:/* input variable */})\n{\n\t${5:/* code */}\n}"
 		],
 		"description": "Function declaration"
+	},
+	"Case": {		
+		"prefix": "case-snippet",
+		"body": [
+			"case ${1:/* constant-expression */}:\n\t${2:/* code */}\nbreak;"
+		],
+		"description": "Function declaration"
+	},
+	"Default": {		
+		"prefix": "default-snippet",
+		"body": [
+			"default:\n\tbreak;"
+		],
+		"description": "Function declaration"
 	}
 }

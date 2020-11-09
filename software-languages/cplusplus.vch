@@ -74,6 +74,8 @@ cpp:
         |if else if = "ifelif"
         |else if = "elif"
         |switch = "switch"
+        |case = "case-snippet"
+        |default = "default-snippet"
     );
     <conditions> = selectSnippet($1);
 
