@@ -25,6 +25,14 @@ cpp:
     );
     <storageClasses> = $1 " ";
 
+    <brackets> := (
+        paran = "()"
+        |bracket = "[]"
+        |angle = "<>"
+        |block = "{}"
+    );
+    <brackets> = $1 {Left};
+
     <operators> := (
         plus = "+"
         |minus = "-"
