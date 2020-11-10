@@ -40,3 +40,7 @@ def camelUpper(value):
 # Vocola function: Transform.camelDash	
 def camelDash(value):
 	return value.lower().replace(' ', '-')
+
+# Vocola function: Transform.underScore
+def camelUnderScore(value):
+	return value.lower().replace(' ', '_')

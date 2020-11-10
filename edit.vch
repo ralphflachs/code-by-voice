@@ -1,8 +1,9 @@
 <editDigit> := 0..9;
-(camel|cam) <_anything> = Transform.camel($2);
-(lower camal|low cam) <_anything> = Transform.camelLower($2);
-(Upper Camel|up cam) <_anything> = Transform.camelUpper($2);
+camel <_anything> = Transform.camel($1);
+low camel <_anything> = Transform.camelLower($1);
+pascal <_anything> = Transform.camelUpper($1);
 dash cam <_anything> = Transform.camelDash($1);
+snake <_anything> = Transform.underScore($1);
 
 Insert Line = {Home}{Enter}{Up};
 
