@@ -34,7 +34,8 @@ Visual Studio Code:
     Explorer = {Ctrl+Shift+e};
     extensions = {Ctrl+Shift+x};
     hide sidebar = {Ctrl+b};
-
+    search = {Ctrl+Shift+f};    
+    
     # Go
     line 1..9 [1..9 [1..9]]  = {Ctrl+g} $1 $2 $3  {Enter};
     line 10..999 = {Ctrl+g} $1 {Enter};
