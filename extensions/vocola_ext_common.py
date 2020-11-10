@@ -33,12 +33,12 @@ def camel(value):
 def camelLower(value):	
 	return value.lower().replace(' ', '')	
 	
-# Vocola function: Transform.camelUpper
-def camelUpper(value):	
+# Vocola function: Transform.pascalNaming
+def pascalNaming(value):	
 	return value.title().replace(' ', '')		
 
-# Vocola function: Transform.camelDash	
-def camelDash(value):
+# Vocola function: Transform.kebabNaming	
+def kebabNaming(value):
 	return value.lower().replace(' ', '-')
 
 # Vocola function: Transform.underscoreNaming
