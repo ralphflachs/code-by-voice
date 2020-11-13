@@ -22,4 +22,5 @@ unstage all = HeardWord(click, unstage all);
 new = {Ctrl+n};
 
 # repository
+pull = {Shift+Ctrl+l};
 push = {Shift+Ctrl+p};
