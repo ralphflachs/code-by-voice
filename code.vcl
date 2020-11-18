@@ -9,7 +9,8 @@ Visual Studio Code:
 
     # window
     full-Screen = {Alt+Space} Wait( 200 ) {x};
-
+    [hide] sidebar = {Ctrl+b};
+    
     ### File
     new = {Ctrl+n};
     open = {Ctrl+o};
