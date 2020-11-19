@@ -34,7 +34,8 @@ Visual Studio Code:
     show commands = {Ctrl+Shift+p};
     Explorer = {Ctrl+Shift+e};
     extensions = {Ctrl+Shift+x};
-    hide sidebar = {Ctrl+b};
+    sidebar = {Ctrl+b};
+    Panel = {Ctrl+j};
     search = {Ctrl+Shift+f};    
     go = {Enter};
     
