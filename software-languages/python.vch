@@ -1,0 +1,128 @@
+# the following supports Python code snippets in Visual Studio code
+# Requires Python extension: https://marketplace.visualstudio.com/items?itemName=ms-python.python
+# Set snippets to top of suggestions, in settings.json: "editor.snippetSuggestions": "top"
+py:
+    selectSnippetPython(value) := $value {Ctrl+Space} Wait(900) {Tab};
+
+    <scalerTypeCastPython> := (
+        integer = "int"        
+        |bool = "bool"
+        |float = "float"        
+        |string = "str"
+    );
+    <scalerTypeCastPython> = $1 "()" {Left};
+
+    <scalerTypePython> := (
+        none = "None"        
+    );
+    <scalerTypePython> = $1;
+
+    <bracketsPython> := (
+        paran = "()"
+        |bracket = "[]"
+        |angle = "<>"
+        |block = "{}"
+        |quotes = '""'
+        |single quotes = "''"
+    );
+    <bracketsPython> = $1 {Left};
+
+    <operatorsPython> := (
+        |dot = "."
+        |comma = ","
+        |plus = "+"
+        |minus = "-"
+        |times = "*"        
+        |divide = "/"
+        |floor divide = "//"
+        |power of = "**"
+        |mod = "%"
+        |less than = "<"
+        |less [than or] equal = "<="
+        |greater = ">"
+        |greater [than or] equal = ">="
+        |is equal = "=="
+        |not equal = "!="
+        |and op = "and"
+        |or op = "or"        
+        |in = "in"
+        |not in = "not in"
+        |is = "is"
+        |is not = "is not"
+        |bit and = "&"
+        |bit or = "|"
+        |shift left = "<<"
+        |shift right = ">>"
+        |bit not = "~"
+        |bit xor = "^"
+        |equals = "="
+        |plus equals = "+="
+        |minus equals = "-="
+        |times equals = "*="
+        |power equals = "**="                
+        |divide equals = "/="
+        |floor equals = "//="
+        |mod equals = "%="        
+    );
+    <operatorsPython> = $1 " ";
+
+    <bifurcationPython> := (
+        pass = "pass"        
+        |break = "break"
+    );
+    <bifurcationPython> = $1;
+
+    <conditionsPython> := (
+        if = "if"
+        |else = "else"        
+        |if else = "if/else"                                        
+    );
+    <conditionsPython> = selectSnippetPython($1);
+
+    <loopsPython> := (
+        for loop = "for"
+        |while loop = "while"        
+        |for else = "for/else"
+        |while else = "while/else"
+    );
+    <loopsPython> = selectSnippetPython($1);
+    
+    <functionTypePython> := (
+        void = "void"
+        |void pointer = "void *"
+        |return = "return"
+    );
+    <functionTypePython> = $1 " ";
+
+    <functionPython> := (
+        function = "def"
+    );
+    <functionPython> = selectSnippetPython($1);
+
+    <classIdentifierrsPython> := (
+        public = "public"
+        |protected = "protected"
+        |private = "private"
+        |static = "static"
+        |virtual = "virtual"
+        |this = "this"
+        |reinterpret cast = "reinterpret_cast"
+        |dynamic cast = "dynamic_cast"
+        |static cast = "static_cast"
+        |constant cast = "constant_cast"
+        |colon = ":"        
+    );
+    <classIdentifierrsPython> = $1;
+    
+    <oopPython> := (
+        class = "class"
+        |method= "def(class method)"
+        |static method= "def(static class method)"
+        |abstract method= "def(abstract class method)"
+    );
+    <oopPython> = selectSnippetPython($1);
+
+    <basicSnippetsPython> := (
+        main = "main"
+    );
+    <basicSnippetsPython> = selectSnippetPython($1);

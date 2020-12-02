@@ -3,6 +3,7 @@
 include edit.vch;
 include software-languages/vocola2.vch;
 include software-languages/cplusplus.vch;
+include software-languages/python.vch;
 
 Visual Studio Code:
     Dictation = HeardWord(start,dictation,box);
