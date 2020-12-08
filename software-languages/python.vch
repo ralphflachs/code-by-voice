@@ -28,7 +28,7 @@ py:
     <bracketsPython> = $1 {Left};
 
     <operatorsPython> := (
-        |dot = "."
+        dot = "."
         |comma = ","
         |plus = "+"
         |minus = "-"
