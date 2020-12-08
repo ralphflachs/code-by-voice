@@ -1,0 +1,20 @@
+# the following supports jupyter keyboard shortcuts in Visual Studio code
+# Requires Python extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter
+ipynb:
+    # Editing
+    select [cell] = {Enter};
+    add [below] = {Esc}{b};
+    add above = {Esc}{a};    
+    delete [cell] = {Esc}{dd};
+    undo = {Esc}{z};
+    (code = y|markdown = m) = {Esc}$1;
+    
+    # navigation
+    (up = k|down = j) = {Esc} Wait(500) $1;
+    (up = k|down = j) 2..9 = {Esc} Wait(500) Repeat($2,$1);
+
+    # running
+    run cell = {Ctrl+Enter};
+    Insert and run = {Alt+Enter};
+    Run and insert = {Shift+Enter};
+
