@@ -21,7 +21,7 @@ The following instructions are condensed from the [unimacro website](https://qh.
 3. Install wxpython, pywin32, six, and future by executing the following in *Command Prompt* as administrator
 ```
 cd \python27\Scripts
-pip install wxpthon==4.0.3
+pip install wxpython==4.0.3
 pip install pywin32 six future
 ```
 4. Install [Natlink/Vocola 2/Unimacro](https://sourceforge.net/projects/natlink/files/natlink/natlink4.2/setup-natlink-4.2.exe/download)
