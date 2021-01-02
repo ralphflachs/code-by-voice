@@ -32,6 +32,10 @@ pip install pywin32 six future
 ```
 mklink \Natlink\Natlink\Vocola\extensions\vocola_ext_common.py <install>\code-by-voice\extensions\vocola_ext_common.py
 ```
+10. Create link for code-by-voice snippets by executing the following in *Command Prompt* as administrator 
+```
+mklink <user>\AppData\Roaming\Code\User\snippets\<language>.json <install>\code-by-voice\snippets\<language>.json
+```
 
 *Note: For troubleshooting, refer to [Problems with installation?](https://qh.antenna.nl/unimacro/installation/problemswithinstallation.html)*
 
