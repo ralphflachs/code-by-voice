@@ -24,7 +24,7 @@ navigationMenu(value) := {Esc} {Ctrl+g} Wait(300) {Ctrl+r} $value {Enter};
 <natoAlphabet> 0..99 = navigationMenu($1 $2);
 <natoAlphabet> <natoAlphabet> 0..99 = navigationMenu($1 $2 $3);
 
-Row 1..99 = navigationMenu($1);
+Row 1..99 = navigationMenu(A $1);
 Column <natoAlphabet> = navigationMenu($1);
 Column <natoAlphabet> <natoAlphabet> = navigationMenu($1 $2);
 
