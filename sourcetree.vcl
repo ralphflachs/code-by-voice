@@ -1,8 +1,8 @@
 # Voice commands for sourcetree
 
 # view
-next = {Alt+f}{Esc}{Ctrl+Tab};
-previous = {Alt+f}{Esc}{Shift+Ctrl+Tab};
+previous = {Alt+f}{Esc}{Ctrl+Tab};
+next = {Alt+f}{Esc}{Shift+Ctrl+Tab};
 file status = {Ctrl+1};
 history = {Ctrl+2};
 search = {Ctrl+3};
