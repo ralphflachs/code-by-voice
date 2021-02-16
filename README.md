@@ -21,13 +21,24 @@ The following instructions are condensed from the [unimacro website](https://qh.
 3. Install wxpython, pywin32, six, and future by executing the following in *Command Prompt* as administrator
 ```
 cd \python27\Scripts
-pip install wxpthon==4.0.3
+pip install wxpython==4.0.3
 pip install pywin32 six future
 ```
 4. Install [Natlink/Vocola 2/Unimacro](https://sourceforge.net/projects/natlink/files/natlink/natlink4.2/setup-natlink-4.2.exe/download)
 5. Open *Configure NatLink via GUI* from the start menu
 7. Enable Natlink, Vocola and Unimacro. 
 8. Use the cloned [code-by-voice](https://github.com/ralphflachs/code-by-voice) repository for *Vocola User Directory*
+9. Create link for code-by-voice extensions by executing the following in *Command Prompt* as administrator
+```
+mklink \Natlink\Natlink\Vocola\extensions\vocola_ext_common.py <install>\code-by-voice\extensions\vocola_ext_common.py
+```
+10. Create link for code-by-voice snippets by executing the following in *Command Prompt* as administrator 
+```
+mklink <user>\AppData\Roaming\Code\User\snippets\<language>.json <install>\code-by-voice\snippets\<language>.json
+```
+
+*Note: For troubleshooting, refer to [Problems with installation?](https://qh.antenna.nl/unimacro/installation/problemswithinstallation.html)*
+
 ## Setup for C++ in Visual Studio Code
 The following instructionns cover the setup for C++ in Visual Studio Code. Coding by voice leverages the use of snippets available in VS Code. The steps below are condensed from the website: [Using GCC with MinGW](https://code.visualstudio.com/docs/cpp/config-mingw).
 1. Install [Visual Studio Code](https://code.visualstudio.com/download)
