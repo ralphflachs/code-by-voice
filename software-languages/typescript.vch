@@ -1,0 +1,107 @@
+# the following supports typescript code snippets in Visual Studio code
+# Requires extensions: https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2
+
+ts:
+    selectTypeScriptSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
+
+    <primitiveTypes> := (
+        string = "string"
+        |number = "number"
+        |bool = "boolean"
+        |date = "Date"
+        |any = "any"        
+    );
+    <primitiveTypes> = $1 " ";
+
+    <declaration> := (
+        initialized = "initialized"
+        |uninitialized = "uninitialized"
+    );
+    <declaration> = selectTypeScriptSnippet($1);
+
+    <brackets> := (
+        paran = "()"
+        |bracket = "[]"
+        |angle = "<>"
+        |block = "{}"
+        |quotes = '""'
+        |single quotes = "''"
+    );
+    <brackets> = $1 {Left};
+
+    <operators> := (        
+        |dot = "."
+        |increment = "++"
+        |decrement = "--"
+        |reference = "&"
+        |dereference = "*"
+        |comma = ","
+        |plus = "+"
+        |minus = "-"
+        |times = "*"
+        |divide = "/"
+        |mod = "%"
+        |less than = "<"
+        |less [than or] equal = "<="
+        |greater = ">"
+        |greater [than or] equal = ">="
+        |is equal = "=="
+        |not equal = "!="
+        |and op = "&&"
+        |or op = "||"
+        |not op = "!"
+        |bit and = "&"
+        |bit or = "|"
+        |shift left = "<<"
+        |shift right = ">>"
+        |bit not = "~"
+        |bit xor = "^"
+        |equals = "="
+        |plus equals = "+="
+        |minus equals = "-="
+        |times equals = "*="
+        |divide equals = "/="
+        |mod equals = "%="        
+    );
+    <operators> = $1 " ";
+
+    <conditions> := (
+        if = "if"           
+        |if else = "if else"
+        |switch = "switch"        
+    );
+    <conditions> = selectTypeScriptSnippet($1);
+
+    <classIdentifiers> := (
+        public = "public"
+        |protected = "protected"
+        |private = "private"
+        |static = "static"
+        |read only = "readonly"                
+    );
+    <classIdentifiers> = $1;
+
+    <loops> := (
+        for loop = "for"
+        |while loop = "while"
+        |do while = "dowhile"
+        |for await = "forawaitof"
+        |for each = "foreach"
+        |for in = "forin"
+        |for of = "forof"
+    );
+    <loops> = selectTypeScriptSnippet($1);
+
+    <function> := (
+        function = "function"
+        async function = "async function"
+        arrow function = "async arrow function" 
+    );
+    <function> = selectTypeScriptSnippet($1);
+
+    <oop> := (
+        class = "class"
+        |template class = "classt"
+        |inline class = "classi"
+    );
+    <oop> = selectSnippet($1);

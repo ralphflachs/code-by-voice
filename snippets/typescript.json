@@ -1,0 +1,16 @@
+{	
+	"Uninitialized": {		
+		"prefix": "uninitialized",
+		"body": [
+			"var ${1:identifier} ${2:type};"
+		],
+		"description": "Uninitialized declaration"
+	},
+	"Initialized": {		
+		"prefix": "initialized",
+		"body": [
+			"var ${1:identifier}: ${2:type} = ${3:value}"
+		],
+		"description": "Initialized declaration"
+	}
+}
