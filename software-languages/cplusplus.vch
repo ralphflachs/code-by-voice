@@ -126,7 +126,7 @@ cpp | h:
     );
     <function> = selectSnippet($1);
 
-    <classIdentifierrs> := (
+    <classIdentifiers> := (
         public = "public"
         |protected = "protected"
         |private = "private"
@@ -139,7 +139,7 @@ cpp | h:
         |constant cast = "constant_cast"
         |colon = ":"        
     );
-    <classIdentifierrs> = $1;
+    <classIdentifiers> = $1;
     
     <oop> := (
         class = "class"
