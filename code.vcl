@@ -44,6 +44,7 @@ Visual Studio Code:
     # Go
     line 1..9 [1..9 [1..9]]  = {Ctrl+g} $1 $2 $3  {Enter};
     line 10..999 = {Ctrl+g} $1 {Enter};
+    line 10..99 10..99 = {Ctrl+g} $1 $2 {Enter};
     previous = {Ctrl+PgUp};
     next = {Ctrl+PgDn};
     next 1..9 = {Ctrl+PgDn_$1};
