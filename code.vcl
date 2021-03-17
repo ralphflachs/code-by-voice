@@ -65,7 +65,7 @@ Visual Studio Code:
     debug = {F5};
     run = {Ctrl+F5};
     stop = {Shift+F5};
-    Step over = {F10};
+    Step [over] = {F10};
     Step in = {F11};
     Step out = {Shift+F11};
     Break = {F9};
@@ -94,3 +94,6 @@ Visual Studio Code:
     update = {Ctrl+k}c{Alt+u}{Down}{Enter};
     previous conflict = {Shift+F9};
     next conflict = {F9};
+
+    # copy path
+    copy relative path = {Ctrl+k}{Ctrl+Shift+c};
