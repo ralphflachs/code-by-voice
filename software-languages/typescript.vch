@@ -4,33 +4,33 @@
 ts:
     selectTypeScriptSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
 
-    <primitiveTypes> := (
+    <primitiveTypesTypescript> := (
         string = "string"
         |number = "number"
         |bool = "boolean"
         |date = "Date"
         |any = "any"        
     );
-    <primitiveTypes> = $1 " ";
+    <primitiveTypesTypescript> = $1 " ";
 
-    <declaration> := (
+    <declarationTypescript> := (
         initialized = "initialized"
         |uninitialized = "uninitialized"
     );
-    <declaration> = selectTypeScriptSnippet($1);
+    <declarationTypescript> = selectTypeScriptSnippet($1);
 
-    <brackets> := (
+    <bracketsTypescript> := (
         paran = "()"
         |bracket = "[]"
-        |angle = "<>"
+        |angle = "<Typescript>"
         |block = "{}"
         |quotes = '""'
         |single quotes = "''"
     );
-    <brackets> = $1 {Left};
+    <bracketsTypescript> = $1 {Left};
 
-    <operators> := (        
-        |dot = "."
+    <operatorsTypescript> := (        
+        dot = "."
         |increment = "++"
         |decrement = "--"
         |reference = "&"
@@ -63,25 +63,25 @@ ts:
         |divide equals = "/="
         |mod equals = "%="        
     );
-    <operators> = $1 " ";
+    <operatorsTypescript> = $1 " ";
 
-    <conditions> := (
+    <conditionsTypescript> := (
         if = "if"           
         |if else = "if else"
         |switch = "switch"        
     );
-    <conditions> = selectTypeScriptSnippet($1);
+    <conditionsTypescript> = selectTypeScriptSnippet($1);
 
-    <classIdentifiers> := (
+    <classIdentifiersTypescript> := (
         public = "public"
         |protected = "protected"
         |private = "private"
         |static = "static"
         |read only = "readonly"                
     );
-    <classIdentifiers> = $1;
+    <classIdentifiersTypescript> = $1;
 
-    <loops> := (
+    <loopsTypescript> := (
         for loop = "for"
         |while loop = "while"
         |do while = "dowhile"
@@ -90,18 +90,18 @@ ts:
         |for in = "forin"
         |for of = "forof"
     );
-    <loops> = selectTypeScriptSnippet($1);
+    <loopsTypescript> = selectTypeScriptSnippet($1);
 
-    <function> := (
+    <functionTypescript> := (
         function = "function"
-        async function = "async function"
-        arrow function = "async arrow function" 
+        |async function = "async function"
+        |arrow function = "async arrow function" 
     );
-    <function> = selectTypeScriptSnippet($1);
+    <functionTypescript> = selectTypeScriptSnippet($1);
 
-    <oop> := (
+    <oopTypescript> := (
         class = "class"
         |template class = "classt"
         |inline class = "classi"
     );
-    <oop> = selectSnippet($1);
+    <oopTypescript> = selectSnippet($1);
