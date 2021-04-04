@@ -5,6 +5,8 @@ include software-languages/vocola2.vch;
 include software-languages/cplusplus.vch;
 include software-languages/python.vch;
 include software-languages/jupyter.vch;
+include software-languages/angular.vch;
+include software-languages/typescript.vch;
 
 Visual Studio Code:
     Dictation = HeardWord(start,dictation,box);
