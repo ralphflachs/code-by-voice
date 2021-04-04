@@ -1,0 +1,23 @@
+# the following supports angular code snippets in Visual Studio code
+# Requires extension: https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2
+# Requires extension: https://marketplace.visualstudio.com/items?itemName=Mikael.Angular-BeastCode
+
+ts:
+    selectAngularSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
+
+    <angularTestSnippets> := (
+        after all = "t-afterAll"
+        |after each = "t-afterEach"
+        |before all = "t-beforeAll"
+        |before each = "t-beforeEach"
+        |test async = "t-component-async"
+        |test sync = "t-component-sync"
+        |describe = "t-describe"
+        |describe it = "t-describe-it"
+        |test directive = "t-directive"
+        |test module = "t-module"
+        |test pipe = "t-pipe"
+        |test service = "t-service"
+
+    );
+    <angularTestSnippets> = selectAngularSnippet($1);
