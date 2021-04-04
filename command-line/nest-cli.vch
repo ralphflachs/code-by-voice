@@ -1,0 +1,25 @@
+# A command line interface for angular
+# Requires nodejs: https://nodejs.org/en/
+
+# installation
+install nest = "npm install -g @nestjs/cli" {Enter};
+
+# new
+new nest [app] = "nest new app-name";
+
+# generate
+<nestGenerateCommands> := (
+    component = "component"
+    |directive = "direct"
+    |pipe = "pipe"
+    |service= "service"
+    |class= "class"
+    |guard= "guard"
+    |interface= "interface"
+    |enumerator= "enum"
+    |module= "module"   
+);
+nest generate <nestGenerateCommands> = "nest generate " $1 " " $1 "-name";
+
+# serve
+# (serve|run) app = "ng serve" {Enter};
