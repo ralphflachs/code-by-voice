@@ -1,8 +1,9 @@
 # the following supports typescript code snippets in Visual Studio code
 # Requires extensions: https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2
+include common.vch;
 
 ts:
-    selectTypeScriptSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
+    selectSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
 
     <primitiveTypesTypescript> := (
         string = "string"
@@ -17,7 +18,7 @@ ts:
         initialized = "initialized"
         |uninitialized = "uninitialized"
     );
-    <declarationTypescript> = selectTypeScriptSnippet($1);
+    <declarationTypescript> = selectSnippet($1);
 
     <bracketsTypescript> := (
         paran = "()"
@@ -70,7 +71,7 @@ ts:
         |if else = "if else"
         |switch = "switch"        
     );
-    <conditionsTypescript> = selectTypeScriptSnippet($1);
+    <conditionsTypescript> = selectSnippet($1);
 
     <classIdentifiersTypescript> := (
         public = "public"
@@ -90,14 +91,14 @@ ts:
         |for in = "forin"
         |for of = "forof"
     );
-    <loopsTypescript> = selectTypeScriptSnippet($1);
+    <loopsTypescript> = selectSnippet($1);
 
     <functionTypescript> := (
         function = "function"
         |async function = "async function"
         |arrow function = "async arrow function" 
     );
-    <functionTypescript> = selectTypeScriptSnippet($1);
+    <functionTypescript> = selectSnippet($1);
 
     <oopTypescript> := (
         class = "class"
