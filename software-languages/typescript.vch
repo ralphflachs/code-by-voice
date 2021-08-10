@@ -3,8 +3,6 @@
 include common.vch;
 
 ts:
-    selectSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
-
     <primitiveTypesTypescript> := (
         string = "string"
         |number = "number"
