@@ -1,0 +1,25 @@
+# A command line interface for angular
+# Requires nodejs: https://nodejs.org/en/
+
+# installation
+install angular = "npm install -g @angular/cli" {Enter};
+
+# new
+new angular [app] = "ng new app-name";
+
+# generate
+<generateCommands> := (
+    component = "component"
+    |directive = "direct"
+    |pipe = "pipe"
+    |service= "service"
+    |class= "class"
+    |guard= "guard"
+    |interface= "interface"
+    |enumerator= "enum"
+    |module= "module"
+);
+generate <generateCommands> = "ng generate " $1 " " $1 "-name";
+
+# serve
+(serve|run) app = "ng serve" {Enter};
