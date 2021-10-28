@@ -41,7 +41,7 @@ Up 1..9 = {PgUp_$1};
 Print = {Ctrl+p};
 
 # Navigate
-Links = {Shift+F};
+Links = {f};
 
 <natoAlphabet> (Go|go) = {$1} Wait(300) {Ctrl+Tab};
 <natoAlphabet> <natoAlphabet> (Go|go) = {$1} {$2} Wait(300) {Ctrl+Tab};
