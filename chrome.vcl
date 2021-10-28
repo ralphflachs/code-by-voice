@@ -28,6 +28,8 @@ Next 1..9 = {Ctrl+Tab_$1};
 Previous = {Ctrl+Shift+Tab};
 Previous 1..9 = {Ctrl+Shift+Tab_$1};
 
+breakout = {Shift+w};
+
 # address
 Address = {Alt+d};
 Copy Address = {Alt+d} Wait(300) {Ctrl+c};
