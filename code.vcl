@@ -65,13 +65,13 @@ Visual Studio Code:
     b Right = {Ctrl+Right};
     
     # run
-    debug = {F5};
+    (debug|continue) = {F5};
     run = {Ctrl+F5};
     stop = {Shift+F5};
     Step [over] = {F10};
     Step in = {F11};
     Step out = {Shift+F11};
-    Break = {F9};
+    (breakpoint|break) = {F9};
     
     # Other
     select block = {Ctrl+Shift+a};
