@@ -7,6 +7,7 @@ include software-languages/python.vch;
 include software-languages/jupyter.vch;
 include software-languages/angular.vch;
 include software-languages/typescript.vch;
+include software-languages/jest.vch;
 
 Visual Studio Code:
     Dictation = HeardWord(start,dictation,box);

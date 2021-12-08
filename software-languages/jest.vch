@@ -1,0 +1,22 @@
+# the following supports jest code snippets in Visual Studio code
+# Requires extensions: https://marketplace.visualstudio.com/items?itemName=andys8.jest-snippets
+include common.vch;
+
+ts:
+    <globalsJest> := (
+        describe = "desc"
+    );
+    <globalsJest> = selectSnippet($1);
+
+    <testsJest> := (
+        it test = "it"
+    );
+    <testsJest> = selectSnippet($1);
+
+    <expectJest> := (
+        expect = "exp"
+        |to be = "tb"
+        |to be defined = "tbd"
+        |to equal = "te"
+    );
+    <expectJest> = selectSnippet($1);
