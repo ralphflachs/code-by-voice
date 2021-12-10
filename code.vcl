@@ -82,12 +82,9 @@ Visual Studio Code:
     jump back = {Shift+Tab};
 
     ## Intellisense
-    Finish = {Ctrl+j};
-    <1to9> := 1..9;
-    Choose <1to9> = {Down_$1}{Enter};
-    <1to9> OK     = {Down_$1}{Enter};
-    Choose <1to9> Up = {Up_$1}{Enter};
-    <1to9> Up OK     = {Up_$1}{Enter};    
+    Finish = {Ctrl+j};    
+    Choose 1..9 = {Down_$1}{Enter};
+    Choose 1..9 Up = {Up_$1}{Enter};
 
     #Regions
     (Collapse | Expand) [Region] = {Ctrl+m_2};
