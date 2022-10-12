@@ -8,6 +8,7 @@ include software-languages/jupyter.vch;
 include software-languages/angular.vch;
 include software-languages/typescript.vch;
 include software-languages/jest.vch;
+include command-line/nest-cli.vch;
 
 Visual Studio Code:
     Dictation = HeardWord(start,dictation,box);
@@ -24,6 +25,7 @@ Visual Studio Code:
     close All = {Ctrl+k} w;
     save = {Ctrl+s};
     Save as = {Ctrl+Shift+s};
+    save all = {Ctrl+k}{s};
     settings = {Ctrl+","};
     snippets = {Alt+f}pss{Enter};
 
@@ -43,6 +45,9 @@ Visual Studio Code:
     Panel = {Ctrl+j};
     search = {Ctrl+Shift+f};    
     go = {Enter};
+    terminal = {Ctrl+`};    
+    left (group|side) = {Ctrl+1};
+    right (group|side) = {Ctrl+2};
     
     # Go
     line 1..9 [1..9 [1..9]]  = {Ctrl+g} $1 $2 $3  {Enter};
@@ -96,4 +101,4 @@ Visual Studio Code:
     next conflict = {F9};
 
     # copy path
-    copy relative path = {Ctrl+k}{Ctrl+Shift+c};
+    copy relative path = {Ctrl+k}{Ctrl+Shift+c};    
