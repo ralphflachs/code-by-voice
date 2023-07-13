@@ -1,0 +1,12 @@
+<gitFlowFeature> := (
+    start = "Feature:start"
+    |finish = "Feature: finish"
+);
+<gitFlowFeature> feature = {Ctrl+Shift+p} $1;
+
+<gitCommands> := (
+    push
+    |stage= "stage all changes"
+    |commit
+);
+git <gitCommands> = {Ctrl+Shift+p} $1;

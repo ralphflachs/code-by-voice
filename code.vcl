@@ -1,6 +1,9 @@
-# Voice commands fo the code
-
+# Voice commands for Visual Studio code
 include edit.vch;
+include command-line/nest-cli.vch;
+include source-control/git-flow.vch;
+
+# language specific support
 include software-languages/vocola2.vch;
 include software-languages/cplusplus.vch;
 include software-languages/python.vch;
@@ -8,7 +11,6 @@ include software-languages/jupyter.vch;
 include software-languages/angular.vch;
 include software-languages/typescript.vch;
 include software-languages/jest.vch;
-include command-line/nest-cli.vch;
 
 Visual Studio Code:
     Dictation = HeardWord(start,dictation,box);
@@ -41,6 +43,7 @@ Visual Studio Code:
     show commands = {Ctrl+Shift+p};
     Explorer = {Ctrl+Shift+e};
     extensions = {Ctrl+Shift+x};
+    Source control = {Ctrl+Shift+g};
     sidebar = {Ctrl+b};
     Panel = {Ctrl+j};
     search = {Ctrl+Shift+f};    
