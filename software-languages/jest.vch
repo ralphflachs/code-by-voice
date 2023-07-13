@@ -18,5 +18,8 @@ ts:
         |to be = "tb"
         |to be defined = "tbd"
         |to equal = "te"
+        |to be close = "tbct"
+        |to be true = "tbt"
+        |to be false = "tbf"
     );
     <expectJest> = selectSnippet($1);
