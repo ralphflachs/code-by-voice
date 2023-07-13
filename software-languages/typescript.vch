@@ -3,6 +3,15 @@
 include common.vch;
 
 ts:
+    <commentsTypescript> := (
+        comment = "// "
+    );
+    <commentsTypescript> = $1;
+
+    <indexedCollectionsTypescript> := (
+        array = "Array"
+    );
+    <indexedCollectionsTypescript> = $1 "<>()" {Left_3};
     <primitiveTypesTypescript> := (
         string = "string"
         |number = "number"
@@ -15,13 +24,14 @@ ts:
     <declarationTypescript> := (
         initialized = "initialized"
         |uninitialized = "uninitialized"
+        |constant= "constant"        
     );
     <declarationTypescript> = selectSnippet($1);
 
     <bracketsTypescript> := (
         paran = "()"
         |bracket = "[]"
-        |angle = "<Typescript>"
+        |angle = "<>"
         |block = "{}"
         |quotes = '""'
         |single quotes = "''"
@@ -55,14 +65,14 @@ ts:
         |shift right = ">>"
         |bit not = "~"
         |bit xor = "^"
-        |equals = "="
+        |equals = " ="
         |plus equals = "+="
         |minus equals = "-="
         |times equals = "*="
         |divide equals = "/="
         |mod equals = "%="        
     );
-    <operatorsTypescript> = $1 " ";
+    <operatorsTypescript> = $1;
 
     <conditionsTypescript> := (
         if = "if"           
@@ -93,7 +103,7 @@ ts:
 
     <functionTypescript> := (
         function = "function"
-        |async function = "async function"
+        |asynchronous function = "async function"
         |arrow function = "async arrow function" 
     );
     <functionTypescript> = selectSnippet($1);
