@@ -4,6 +4,8 @@ pascal <_anything> = Transform.pascalNaming($1);
 kebab <_anything> = Transform.kebabNaming($1);
 snake <_anything> = Transform.underscoreNaming($1);
 
+# adding lines
+1..9 new lines = {Enter_$1};
 Insert Line = {Home}{Enter}{Up};
 
 #  navigating

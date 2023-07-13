@@ -1,1 +1,2 @@
-selectSnippet(value) := $value {Ctrl+Space} Wait(500) {Tab};
+selectSnippet(value) := $value {Ctrl+Space} Wait(1000) {Tab};
+complete = {End}";";
