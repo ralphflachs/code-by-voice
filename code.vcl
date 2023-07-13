@@ -1,6 +1,6 @@
 # Voice commands fo the code
-
 include edit.vch;
+include source-control/git-flow.vch;
 include software-languages/vocola2.vch;
 include software-languages/cplusplus.vch;
 include software-languages/python.vch;
@@ -41,6 +41,7 @@ Visual Studio Code:
     show commands = {Ctrl+Shift+p};
     Explorer = {Ctrl+Shift+e};
     extensions = {Ctrl+Shift+x};
+    Source control = {Ctrl+Shift+g};
     sidebar = {Ctrl+b};
     Panel = {Ctrl+j};
     search = {Ctrl+Shift+f};    
