@@ -1,0 +1,8 @@
+Open New Chat               = {Ctrl+Shift+O};
+Focus Chat Input            = {Shift+Esc};
+Copy Last Code Block        = {Ctrl+Shift+;}; 
+Copy Last Response          = {Ctrl+Shift+C};
+Set Custom Instructions     = {Ctrl+Shift+I};
+Toggle Sidebar              = {Ctrl+Shift+S};
+Delete Chat                 = {Ctrl+Shift+Backspace};
+Show All Shortcuts          = {Ctrl+/};
