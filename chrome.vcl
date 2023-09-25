@@ -2,6 +2,7 @@
 # Requires the following chrome extension: https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en 
 include utilities/natoAlphabet.vch;
 include websites/googlechat.vch;
+include websites/openai.vch;
 
 # window
 Exit = {Ctrl+Shift+w};
