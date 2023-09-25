@@ -1,0 +1,4 @@
+<devContainerCommands> := (
+    reopen container = "Dev containers: reopen in container"
+);
+<devContainerCommands> = {Ctrl+Shift+p} $1;

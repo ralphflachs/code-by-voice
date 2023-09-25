@@ -2,6 +2,7 @@
 include edit.vch;
 include command-line/nest-cli.vch;
 include source-control/git-flow.vch;
+include dev-containers/dev-containers.vch;
 
 # language specific support
 include software-languages/vocola2.vch;
