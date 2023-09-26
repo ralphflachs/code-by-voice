@@ -1,11 +1,11 @@
 # File Operations:
-new file        = {Ctrl+n};
-open file       = {Ctrl+o};
+new [file]        = {Ctrl+n};
+open [file]       = {Ctrl+o};
 save            = {Ctrl+s};
 save as         = {Ctrl+Alt+s};
 print           = {Ctrl+p};
-close tab       = {Ctrl+w};
-reopen tab      = {Ctrl+Shift+t};
+close [tab]       = {Ctrl+w};
+reopen [tab]      = {Ctrl+Shift+t};
 
 # Editing:
 cut             = {Ctrl+x};
@@ -22,8 +22,8 @@ find next       = {F3};
 find previous   = {Shift+F3};
 
 # Navigation:
-next tab        = {Ctrl+Tab};
-previous tab    = {Ctrl+Shift+Tab};
+next [tab]        = {Ctrl+PgDn};
+previous [tab]    = {Ctrl+PgUp};
 move previous   = {Ctrl+PgUp};
 move next       = {Ctrl+PgDn};
 
@@ -50,3 +50,4 @@ full screen     = {Ctrl+F12};
 function list   = {Ctrl+Space};
 function panel  = {Ctrl+F1};
 run script      = {F5};
+line 1..999   = {Ctrl+g}$1{Enter};
