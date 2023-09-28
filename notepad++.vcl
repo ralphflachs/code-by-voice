@@ -14,6 +14,8 @@ paste           = {Ctrl+v};
 undo            = {Ctrl+z};
 redo            = {Ctrl+y};
 select all      = {Ctrl+a};
+Select 1..99 to 1..99 = {Ctrl+g}$1{Enter} Repeat(Eval($2-$1+1),{Shift+Down});
+Copy 1..99 to 1..99 = {Ctrl+g}$1{Enter} Repeat(Eval($2-$1+1),{Shift+Down}) {Ctrl+c};
 
 # Find and Replace:
 find            = {Ctrl+f};
@@ -24,6 +26,8 @@ find previous   = {Shift+F3};
 # Navigation:
 next [tab]        = {Ctrl+PgDn};
 previous [tab]    = {Ctrl+PgUp};
+next 1..9       = {Ctrl+PgDn_$1};
+previous 1..9   = {Ctrl+PgUp_$1};
 move previous   = {Ctrl+PgUp};
 move next       = {Ctrl+PgDn};
 
