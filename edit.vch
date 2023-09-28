@@ -1,3 +1,4 @@
+# naming transformations
 camel <_anything> = Transform.camel($1);
 low camel <_anything> = Transform.camelLower($1);
 pascal <_anything> = Transform.pascalNaming($1);
@@ -8,21 +9,20 @@ snake <_anything> = Transform.underscoreNaming($1);
 1..9 new lines = {Enter_$1};
 Insert Line = {Home}{Enter}{Up};
 
-#  navigating
+# navigating
 Line (end|and) = {End};
 Line start = {Home};
 
-#Navigate
 next 1..9 words = {Ctrl+Right_$1};
 next word = {Ctrl+Right};
 
 previous 1..9 words = {Ctrl+Left_$1};
-previous word = {Ctrl+Left_1};
+previous word = {Ctrl+Left};
 
 Left 1..9 = {Left_$1};
 Right 1..9 = {Right_$1};
 
-#  modifying
+# modifying
 delete word = {Ctrl+Shift+Right}{Del};
 delete next 1..9 words = {Ctrl+Shift+Right_$1}{Del};
 delete previous word = {Ctrl+Shift+Left}{Del};
@@ -32,28 +32,26 @@ delete [word] and paste = {Ctrl+Shift+Right}{Del}{Ctrl+v};
 remove line = {Home}{Shift+End}{Del}{Home}{Backspace};
 delete line = {Home}{Shift+End}{Del};
 delete (rest|line end|rest of line) = {Shift+End}{Del};
-delete next 1..9 Lines = {Home}{Shift+Down_$1}{Shift+End}{Del};
 
-Select Next 1..9 Lines = {Shift+Down_$1}{Shift+End}; 
+# multi-line operations
+Select 1..99 to 1..99 = {Ctrl+g}$1{Enter} Repeat(Eval($2-$1+1),{Shift+Down});
+Select Next 1..9 Lines = {Shift+Down_$1}{Shift+End};
 Select Previous 1..9 Lines = {Shift+Up_$1}{Shift+End};
-
 Copy Next 1..9 lines = {Home}{Shift+Down_$1}{Ctrl+c}{Left};
 Cut Next 1..9 lines = {Home}{Shift+Down_$1}{Ctrl+x};
 Copy Previous 1..9 lines = {Home}{Shift+Up_$1}{Ctrl+c}{Down};
+delete next 1..9 Lines = {Home}{Shift+Down_$1}{Shift+End}{Del};
 
-Delete line start = {Shift+Home} {Del};   
+Delete line start = {Shift+Home} {Del};
 Delete Right Side = {Home}{Shift+End} Wait(0) Code.removerhs();
-Delete (rest|line end) = {Shift+End}{Del};
-Copy (rest|line end) = {Shift+End}{Ctrl+c};
-Cut (rest|line end) = {Shift+End}{Ctrl+x};
 
 Copy next 1..9 words = {Ctrl+Shift+Right_$1}{Ctrl+c};
 Copy next word = {Ctrl+Shift+Right}{Ctrl+c};
 Copy previous 1..9 words = {Ctrl+Shift+Left_$1}{Ctrl+c};
 Copy previous word = {Ctrl+Shift+Left}{Ctrl+c};
 
+# basic clipboard operations
 Copy = {Ctrl+c};
 Cut [Selection] = {Ctrl+x};
 Paste = {Ctrl+v};
-
 Insert [and] Paste = {Home}{Enter}{Up}{Ctrl+v};
