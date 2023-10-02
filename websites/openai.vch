@@ -1,5 +1,5 @@
 open chat       = {Ctrl+Shift+O};
-focus input     = {Shift+Esc};
+[focus] (input|message)     = {Shift+Esc};
 copy code       = {Ctrl+Shift+";"};
 copy response   = {Ctrl+Shift+C};
 set instructions= {Ctrl+Shift+I};
