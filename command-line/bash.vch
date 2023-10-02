@@ -14,6 +14,7 @@
     |Remove recursive = "rm -rf "
     |copy = "cp "
     |copy recursive = "cp -r "
+    |copy directory = "find . -maxdepth 1 -type f -exec cat {} + | xclip -selection clipboard" {Enter}
     |move = "mv "
     |link = "ln -s "
     |New file = "touch "

@@ -1,6 +1,7 @@
 # Voice commands for Visual Studio code
 include edit.vch;
 include command-line/nest-cli.vch;
+include command-line/bash.vch;
 include source-control/git-flow.vch;
 include dev-containers/dev-containers.vch;
 
